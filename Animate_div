@@ -1,0 +1,118 @@
+<!-- Animate a div when we scroll to its position -->
+<html>
+    <head>
+        <title>Animate div</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.4/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container"><br><br>
+            <div class="row text-white">
+            <div class="col-lg-4 col-ml-4 col-sm-4 " id="card-one">
+            <div class="card" style=" background-color: #f98866">
+              <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">DORA</h4>
+                <p class="card-text">Some example text</p>
+                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-ml-4 col-sm-4" id="card-two">
+            <div class="card" style=" background-color: #f98866">
+              <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">DORA</h4>
+                <p class="card-text">Some example text </p>
+                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-ml-4 col-sm-4" id="card-three">
+            <div class="card" style=" background-color: #f98866">
+              <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 class="card-title">DORA</h4>
+                <p class="card-text">Some example text </p>
+                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br>
+     </div>
+        <div class="text-white container-fluid text-center" style="width: 100%; 
+        height:400px; background-color:#80bd9e; margin-top: 10%">
+            <h1 style="line-height:400px;" id="textanimate">Welcome Dora</h1>
+    </div>
+    <br><br>
+    <div class="container"><br><br>
+        <div class="row text-white">
+        <div class="col-lg-4 col-ml-4 col-sm-4 " id="cardtwo-one">
+        <div class="card" style=" background-color: #f98866">
+          <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <h4 class="card-title">DORA</h4>
+            <p class="card-text">Some example text</p>
+            <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-ml-4 col-sm-4 " id="cardtwo-two">
+        <div class="card" style=" background-color: #f98866;">
+          <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <h4 class="card-title">DORA</h4>
+            <p class="card-text">Some example text</p>
+            <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+          </div>
+        </div>
+      </div>
+     
+        <div class="col-lg-4 col-ml-4 col-sm-4 " id="cardtwo-three">
+        <div class="card" style=" background-color: #f98866">
+          <img class="card-img-top" src="dora.jpeg" alt="Card image" style="width:100%">
+          <div class="card-body text-center">
+            <h4 class="card-title">DORA</h4>
+            <p class="card-text">Some example text</p>
+            <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!--Code for scrolling-->
+     <script type="text/javascript">
+        $(document).ready(function(){
+         $(window).scroll(function(){
+           var positiontop = $(document).scrollTop();
+           console.log(positiontop);
+           if((positiontop>10)&& (positiontop<213)){
+               $('#card-one').addClass('animated bounceInLeft');
+               $('#card-two').addClass('animated bounceInLeft');
+               $('#card-three').addClass('animated bounceInLeft');
+           }
+
+           if((positiontop>226)&& (positiontop<334)){
+            $('#textanimate').addClass('animated slideInUp');
+           
+        }
+
+        if((positiontop>554)&& (positiontop<650)){
+            $('#cardtwo-one').addClass('animated bounceInLeft');
+            $('#cardtwo-two').addClass('animated bounceInLeft');
+            $('#cardtwo-three').addClass('animated bounceInLeft');
+        }
+
+         });
+        });
+        
+     </script>
+    </body>
+</html>
